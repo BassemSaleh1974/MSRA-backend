@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --check server.js",
     "start": "node server.js"
   },
   "repository": {
@@ -17,7 +17,7 @@
     "url": "https://github.com/BassemSaleh1974/MSRA-backend/issues"
   },
   "homepage": "https://github.com/BassemSaleh1974/MSRA-backend#readme",
-  "description": "",
+  "description": "Website and Express backend for Dr. Ashraf Fakhry Dental Clinic in Mansoura, Egypt.",
   "dependencies": {
     "express": "^4.21.2"
   }
