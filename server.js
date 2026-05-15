@@ -1,23 +1,26 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+const publicDirectory = path.join(__dirname, 'public');
 
-app.get('/', (req, res) => {
-  res.send('Hello from MSRA-backend!');
-});
+app.use(express.static(publicDirectory));
 
 app.get('/status', (req, res) => {
   res.json({
     status: 'Backend is live!',
+    clinic: 'Dr. Ashraf Fakhry Dental Clinic',
     time: new Date()
   });
 });
+
 app.get('/about', (req, res) => {
   res.json({
-    project: 'MSRA-backend',
-    developer: 'Bassem',
-    message: 'This is a simple backend built with Express!',
+    project: 'Dr. Ashraf Fakhry Dental Clinic Website',
+    doctor: 'Dr. Ashraf Fakhry',
+    specialty: 'Consultant in Dental Implantology',
+    location: 'Hussain Bek Street, 4th Floor, above Saraya Pharmacy, Mansoura, Egypt',
     time: new Date()
   });
 });
